@@ -1,112 +1,13 @@
-h1 {
-    color: rgb(255, 255, 255);
-    font-size: 500%;
-}
+/* FONTS USED
+   Courier New        — hero line 1 ("Making") — monospace, italic
+   Playfair Display   — hero line 2, section titles — elegant serif
+   Bebas Neue         — hero line 3, skill names — bold condensed display
+   Brush Script MT    — your name signature — cursive
+   Garamond           — about-me quote — classic serif
+   Space Grotesk      — body text, cards, nav, labels — clean modern sans */
 
-h2 {
-    color: rgb(255, 255, 255);
-    font-size: 250%;
-    font-family: 'Trebuchet MS', sans-serif;
-}
 
-/* #region about me section */
-.aboutme-title {
-    color: rgba(255, 255, 255, 0.4);
-    font-family: 'Trebuchet MS', sans-serif;
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    margin-bottom: 24px;
-}
-
-.aboutme-container {
-    margin: 60px auto;
-    padding: 0 60px;
-    border-top: 0.5px solid rgba(255, 255, 255, 0.1);
-    padding-top: 40px;
-}
-
-.aboutme-text {
-    float: right;
-    border-radius: 5px;
-    /*border: 0.75px solid rgba(255, 255, 255, 0.3);*/
-    padding: 20px;
-    margin: 20px;
-}
-
-.aboutme {
-    text-align: right;
-}
-
-/* #endregion */
-
-/* #region title animations */
-.one {
-    font-family: Courier New, monospace;
-    font-style: italic;
-    font-weight: 500;
-    text-align: left;
-    margin-left: 180px;
-
-    animation: moveLeft 1ms linear both;
-    animation-timeline: scroll();
-    animation-range: entry 0% exit 100%;
-}
-
-.two {
-    font-family: Garamond, serif;
-    font-weight: bold;
-    text-align: center;
-    margin-right: 70px;
-
-    animation: moveRight 1 linear both;
-    animation-timeline: scroll();
-    animation-range: entry 0% exit 100%;
-}
-
-.three {
-    font-family: Arial, sans-serif;
-    font-style: italic;
-    font-weight: 500;
-    text-align: right;
-
-    margin-right: 100px;
-    animation: moveLeft 1 linear both;
-    animation-timeline: scroll();
-    animation-range: entry 0% exit 100%;
-}
-
-@keyframes moveLeft {
-    from {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-    to {
-        transform: translateX(-120%);
-        opacity: 0;
-    }
-}
-
-@keyframes moveRight {
-    from {
-        transform: translateX(0%);
-        opacity: 1;
-    }
-
-    to {
-        transform: translateX(120%);
-        opacity: 0;
-    }
-}
-
-/* #endregion */
-
-p {
-    color: white;
-    font-family: Garamond, serif;
-    text-align: center;
-}
-
+/* #region base styles */
 body {
     background: black;
     overflow-x: hidden;
@@ -115,17 +16,25 @@ body {
     line-height: 1.6;
 }
 
-.text-container {
-    margin: 40px auto;
-    padding: 0 20px;
-    max-width: 1200px;
+p {
+    color: white;
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    text-align: center;
 }
 
-.name {
-    color: lightgray;
-    font-family: Brush Script MT, cursive;
-    font-size: 200%;
+h1 {
+    color: white;
+    font-size: 700%;
 }
+
+h2 {
+    color: white;
+    font-size: 250%;
+    font-family: 'Playfair Display', Garamond, serif;
+}
+
+/* #endregion */
+
 
 /* #region nav bar */
 .nav-container {
@@ -157,7 +66,7 @@ body {
 .nav-home {
     color: white;
     text-decoration: none;
-    font-family: Arial, sans-serif;
+    font-family: 'Space Grotesk', Arial, sans-serif;
     font-weight: 600;
     font-size: 16px;
 }
@@ -177,12 +86,11 @@ body {
 .nav-link {
     color: lightgray;
     text-decoration: none;
-    font-family: Arial, sans-serif;
+    font-family: 'Space Grotesk', Arial, sans-serif;
     font-size: 15px;
     padding: 8px 14px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 4px;
-    white-space: nowrap;
     transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
@@ -199,65 +107,503 @@ body {
 
 /* #endregion */
 
-/* #region skill badges */
-.badges-container {
+
+/* #region hero text animations */
+.text-container {
+    margin: 40px auto;
+    padding: 0 20px;
+    max-width: 1200px;
+}
+
+/* line 1: "Making" — Courier New italic, slides left on scroll */
+.one {
+    font-family: 'Courier New', monospace;
+    font-style: italic;
+    font-weight: 500;
+    text-align: left;
+    padding-left: 40px;
+    margin: 0 0 0 80px;
+    line-height: 1;
+    animation: moveLeft linear both;
+    animation-timeline: scroll();
+    animation-range: entry 0% exit 100%;
+}
+
+/* line 2: "myself" — Playfair Display, slides right on scroll */
+.two {
+    font-family: 'Playfair Display', Garamond, serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 30px 0 0;
+    line-height: 1.5;
+    animation: moveRight linear both;
+    animation-timeline: scroll();
+    animation-range: entry 0% exit 100%;
+}
+
+/* line 3: "even better" — Bebas Neue condensed display, slides left on scroll */
+.three {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-weight: 400;
+    text-align: right;
+    padding-right: 40px;
+    margin: 0 50px 0 0;
+    line-height: 2;
+    letter-spacing: 4px;
+    animation: moveLeft linear both;
+    animation-timeline: scroll();
+    animation-range: entry 0% exit 100%;
+}
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(-120%);
+        opacity: 0;
+    }
+}
+
+@keyframes moveRight {
+    from {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(120%);
+        opacity: 0;
+    }
+}
+
+/* #endregion */
+
+
+/* #region name signature */
+.name {
+    color: lightgray;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 200%;
+}
+
+/* #endregion */
+
+/* #region about me section */
+.aboutme-container {
+    margin: 60px auto;
+    padding: 40px 60px 0;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+}
+
+.aboutme-title {
+    color: rgba(255, 255, 255, 0.4);
+    font-family: 'Playfair Display', Garamond, serif;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+}
+
+.aboutme-text {
+    float: right;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.aboutme {
+    text-align: right;
+    font-family: Garamond, serif;
+    font-size: 1.1rem;
+}
+
+/* grayscale photo — color appears on hover */
+.me {
+    width: 500px;
+    max-width: 100%;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.me:hover {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
+/* #endregion */
+
+
+/* #region sections */
+
+.section-container {
+    margin: 60px auto;
+    padding: 40px 40px 0;
+    max-width: 1200px;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+    animation: fadeInUp 0.8s ease both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 35%;
+}
+
+.section-title {
+    color: rgba(255, 255, 255, 0.4);
+    font-family: 'Playfair Display', Garamond, serif;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+/* 3-column grid (story cards) */
+.three-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+/* 2-column grid (connect section) */
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* #endregion */
+
+
+/* #region story cards (section 1) */
+.story-card {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 24px;
+    color: rgba(255, 255, 255, 0.75);
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* #endregion */
+
+
+/* #region project cards */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.project-card {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+
+/* small label above the title: e.g. "Science · 2024" */
+.project-tag {
+    color: rgba(255, 255, 255, 0.35);
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: left;
+    margin: 0;
+}
+
+.project-title {
+    color: white;
+    font-family: 'Playfair Display', Garamond, serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.project-desc {
+    color: rgba(255, 255, 255, 0.55);
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: 13px;
+    text-align: left;
+    line-height: 1.75;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* sits at the bottom of the card, brightens on hover */
+.project-link {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: 13px;
+    transition: color 0.2s ease;
+    margin-top: 8px;
+}
+
+.project-link:hover {
+    color: white;
+}
+
+/* #endregion */
+
+
+/* #region skills rows (section 2) */
+.skill-row {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    padding: 18px 0;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+    transition: padding-left 0.3s ease;
+}
+
+.pic-container {
+    float: right;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.allofme {
+    width: 100px;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease;
+    position: relative;
+    transform: translate(0px, -500px);
+}
+
+.allofme:hover {
+    filter: grayscale(0%);
+    scale: 1.1;
+}
+
+.bc2m {
+    width: 100px;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease;
+}
+
+.bc2m:hover {
+    filter: grayscale(0%);
+    scale: 1.1;
+}
+
+.cookieandme {
+    width: 100px;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease;
+}
+
+.cookieandme:hover {
+    filter: grayscale(0%);
+    scale: 1.1;
+}
+
+.me-at-scifair {
+    width: 100px;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease;
+}
+
+.me-at-scifair:hover {
+    filter: grayscale(0%);
+    scale: 1.1;
+}
+
+.me-ella-cora {
+    width: 100px;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease;
+}
+
+.me-ella-cora:hover {
+    filter: grayscale(0%);
+    scale: 1.1;
+}
+
+.oboeday {
+    width: 100px;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease;
+}
+
+.oboeday:hover {
+    filter: grayscale(0%);
+    scale: 1.1;
+}
+
+.section-container {
+    color: white;
+
+}
+
+/* #endregion */
+
+
+/* #region connect section (section 3) */
+
+/* left-side image — grayscale, color on hover */
+.side-img {
+    width: 90%;
+    max-height: 420px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease;
+    border-radius: 10%;
+}
+
+.side-img:hover {
+    filter: grayscale(0%);
+    scale: 1.1;
+    border-radius: 10%;
+}
+
+/* right-side content */
+.connect-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.connect-heading {
+    font-family: 'Playfair Display', Garamond, serif;
+    font-size: 2rem;
+    color: white;
+    text-align: left;
+    margin: 0;
+}
+
+.connect-text {
+    color: rgba(255, 255, 255, 0.55);
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: 15px;
+    text-align: left;
+    margin: 0;
+}
+
+.connect-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    text-decoration: none;
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    width: fit-content;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.connect-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* #endregion */
+
+
+/* #region footer */
+.site-footer {
+    border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-name {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.8rem;
+    color: lightgray;
+    margin-bottom: 16px;
+}
+
+/* row of footer links */
+.footer-links {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
-    flex-wrap: wrap;
-    margin: 30px auto;
-    padding: 0 20px;
+    margin-bottom: 20px;
 }
 
-.badge {
-    display: inline-block;
-    padding: 8px 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    color: rgba(255, 255, 255, 0.8);
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    background: rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease;
+.footer-link {
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: 14px;
+    transition: color 0.2s ease;
 }
 
-.badge:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.6);
+.footer-link:hover {
     color: white;
-    transform: translateY(-2px);
 }
 
-.badge-1 {
-    animation: fadeInUp 0.5s ease-out;
-    animation-timeline: scroll();
-    animation-range: entry -50% entry 50%;
+.footer-sep {
+    color: rgba(255, 255, 255, 0.25);
+    font-family: 'Space Grotesk', Arial, sans-serif;
 }
 
-.badge-2 {
-    animation: slideInLeft 0.6s ease-out 0.1s both;
-    animation-timeline: scroll();
-    animation-range: entry -50% entry 50%;
+.footer-small {
+    color: rgba(255, 255, 255, 0.2);
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: 12px;
 }
 
-.badge-3 {
-    animation: slideInRight 0.6s ease-out 0.2s both;
-    animation-timeline: scroll();
-    animation-range: entry -50% entry 50%;
+/* #endregion */
+
+/* #region sources file */
+.content {
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.badge-4 {
-    animation: fadeInUp 0.5s ease-out 0.3s both;
-    animation-timeline: scroll();
-    animation-range: entry -50% entry 50%;
+.sources-title {
+    color: rgba(255, 255, 255, 0.4);
+    font-family: 'Playfair Display', Garamond, serif;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin: 0 0 32px;
 }
 
+.sources-text {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.sources-text ol {
+    padding-left: 1.4em;
+    margin: 0 0 24px;
+}
+
+.sources-text li {
+    margin-bottom: 14px;
+    line-height: 1.75;
+}
+
+.sources-text p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 13px;
+    margin: 0;
+}
+
+/* #endregion */
+
+/* #region shared keyframe animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
 
     to {
@@ -288,106 +634,6 @@ body {
         opacity: 1;
         transform: translateX(0);
     }
-}
-
-/* #endregion */
-
-.me {
-    width: 500px;
-    filter: grayscale(100%);
-
-}
-
-.me:hover {
-    filter: grayscale(0%);
-    transform: scale(1.1);
-}
-
-/* #region wireframe styling */
-.section-container {
-    margin: 60px auto;
-    padding: 0 40px;
-    max-width: 1200px;
-    border-top: 0.5px solid rgba(255, 255, 255, 0.1);
-    padding-top: 40px;
-}
-
-.section-title {
-    color: rgba(255, 255, 255, 0.4);
-    font-family: 'Trebuchet MS', sans-serif;
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    margin-bottom: 24px;
-}
-
-.wire-box {
-    border: 0.75px solid rgba(255, 255, 255, 0.3);
-    height: 130px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255, 255, 255, 0.2);
-    font-family: Arial, sans-serif;
-    font-size: 10px;
-}
-
-.wire-box--tall {
-    height: 200px;
-}
-
-.three-col {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-}
-
-.two-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    align-items: start;
-}
-
-.wire-row {
-    border: 0.75px solid rgba(255, 255, 255, 0.3);
-    height: 50px;
-    margin-bottom: 12px;
-}
-
-.wire-row--sm {
-    height: 20px;
-    margin-bottom: 8px;
-}
-
-.wire-side {
-    display: flex;
-    flex-direction: column;
-}
-
-.wire-label {
-    color: rgba(255, 255, 255, 0.2);
-    font-family: Arial, sans-serif;
-    font-size: 10px;
-    text-align: left;
-    margin-bottom: 12px;
-}
-
-.wire-btn {
-    border: 0.75px solid rgba(255, 255, 255, 0.4);
-    color: rgba(255, 255, 255, 0.3);
-    font-family: Arial, sans-serif;
-    font-size: 10px;
-    padding: 6px 16px;
-    display: inline-block;
-    margin-top: 8px;
-    width: fit-content;
-}
-
-.wire-footer {
-    border-top: 0.5px solid rgba(255, 255, 255, 0.1);
-    padding: 20px 0;
-    text-align: center;
 }
 
 /* #endregion */

@@ -1,9 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8" />
     <title>Sylas' Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts:
+         Bebas Neue     = big bold display text (hero line 3, skill names)
+         Playfair Display = editorial headings (hero line 2, section titles)
+         Space Grotesk  = clean modern body text (cards, labels, nav) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=Space+Grotesk:wght@400;500&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
@@ -14,13 +25,14 @@
             <span class="nav-sep">|</span>
             <span class="nav-name">Sylas White</span>
         </div>
-
         <div class="nav-right">
             <a href="#contact" class="nav-link">Contact</a>
             <a href="sources.html" class="nav-link">Sources</a>
         </div>
     </nav>
+
     <br />
+
     <div class="text-container">
         <div>
             <h1 class="one">Making</h1>
@@ -33,68 +45,137 @@
         </div>
     </div>
 
-    <!-- Skills/Interests Badges -->
-    <div class="badges-container">
-        <span class="badge badge-1">Science</span>
-        <span class="badge badge-2">Web Design</span>
-        <span class="badge badge-3">Creator</span>
-        <span class="badge badge-4">Learner</span>
-    </div>
-
     <p class="name">Sylas White</p>
 
     <div class="aboutme-container">
-        <div>
-            <h2 class="aboutme-title"> - About Me.</h2>
-        </div>
+        <h2 class="aboutme-title"> - About Me.</h2>
         <div class="aboutme-text">
-            <p class="aboutme"><b>"Take the risk or lose the chance." — Richard Branson</b><br>
-                <br />
+            <p class="aboutme"><b>"Take the risk or lose the chance." — Richard Branson</b><br><br>
                 I am the type of person who constantly seeks new opportunities,<br>
-                specifically, in <i>science.</i>
+                specifically, in <i>science.</i> Through this passion, I've been <br>
+                able to meet a cluster of professionals. These connections have <br>
+                made me into who I am today. I'm a senior at Castle High School <br>
+                in Newburgh, IN. I've been apart of the Bring Change 2 Mind club <br>
+                for 3 years, and I also have been in science fair since 7th grade.<br>
+                I can't wait for what the future holds for me!
             </p>
         </div>
-        <div>
-            <img src="test-assets/PictureOfMe.PNG" class="me" alt="me, myself, and I" />
-        </div>
+        <img src="test-assets/PictureOfMe.PNG" class="me" alt="me, myself, and I" />
     </div>
 
-    <!-- ── SECTION 1: three-column grid ── -->
+
     <div class="section-container">
-        <h2 class="section-title">— Section Title.</h2>
+        <h2 class="section-title">— What Defines Me.</h2>
         <div class="three-col">
-            <div class="wire-box"></div>
-            <div class="wire-box"></div>
-            <div class="wire-box"></div>
-        </div>
-    </div>
-
-    <!-- ── SECTION 2: stacked rows ── -->
-    <div class="section-container">
-        <h2 class="section-title">— Section Title.</h2>
-        <div class="wire-row"></div>
-        <div class="wire-row"></div>
-        <div class="wire-row"></div>
-    </div>
-
-    <!-- ── SECTION 3: image left, content right ── -->
-    <div class="section-container">
-        <h2 class="section-title">— Section Title.</h2>
-        <div class="two-col">
-            <div class="wire-box wire-box--tall wire-box--x"></div>
-            <div class="wire-side">
-                <p class="wire-label">content</p>
-                <div class="wire-row wire-row--sm"></div>
-                <div class="wire-row wire-row--sm"></div>
-                <div class="wire-row wire-row--sm"></div>
-                <div class="wire-btn">button</div>
+            <div class="story-card">The brine shrimp didn't die dramatically. They just slowed then went still,
+                extra still. I was counting nauplii under a microscope at 6 p.m. on a Tuesday, counting
+                mortality rates in a solution I'd mixed myself, and the number I got back was not the number I needed. I
+                wrote it down anyway.
+            </div>
+            <div class="story-card">The synthesizer cut out at the worst possible moment, half-time of a
+                football
+                game. You didn't have a backup. You messed with the mix from the sideline, found a workaround
+                in about 90 seconds, and the show kept moving. Nobody in the stands knew.
+            </div>
+            <div class="story-card">Kanji doesn't have a shortcut. You either know the stroke order or you don't. You
+                kept
+                a flashcard stack your nightstand. By Japanese III, the stack was embarrassingly large. You kept
+                the old ones anyway, just to see how far the stacks have grew.
             </div>
         </div>
     </div>
 
-    <footer id="contact" class="wire-footer">
-        <p class="wire-label">footer</p>
+
+    <div class="section-container">
+        <h2 class="section-title">— Projects.</h2>
+        <div class="project-grid">
+
+            <div class="project-card">
+                <p class="project-tag">Website for Change · Week 2</p>
+                <h3 class="project-title">Minds Matter 101</h3>
+                <p class="project-desc">A simple website built to educate and raise awareness about mental health.</p>
+                <a href="https://github.com/sylswhit/int-u2-project-starter-code-2.git" class="project-link">View
+                    Project →</a>
+            </div>
+
+            <div class="project-card">
+                <p class="project-tag">Category · Year</p>
+                <h3 class="project-title">Project Title</h3>
+                <p class="project-desc">Describe what this project is, what you built, and what you learned from it.</p>
+                <a href="#" class="project-link">View Project →</a>
+            </div>
+
+            <div class="project-card">
+                <p class="project-tag">Category · Year</p>
+                <h3 class="project-title">Project Title</h3>
+                <p class="project-desc">Describe what this project is, what you built, and what you learned from it.</p>
+                <a href="#" class="project-link">View Project →</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="section-container">
+        <h2 class="section-title">— Skills + Interests.</h2>
+
+        <div class="skill-row">
+            <span class="skill-name">Science</span>
+            <span class="skill-desc">Toxicology, Environmental Science and research methodology</span>
+        </div>
+        <div class="skill-row">
+            <span class="skill-name">Web Design | Code</span>
+            <span class="skill-desc">HTML, CSS, Java, Python, + C#</span>
+        </div>
+        <div class="skill-row">
+            <span class="skill-name">Japanese</span>
+            <span class="skill-desc">Reading, writing, and conversational study</span>
+        </div>
+        <div class="skill-row">
+            <span class="skill-name">Music</span>
+            <span class="skill-desc">Oboe and piano player</span>
+        </div>
+
+        <div class="pic-container">
+            <img src="test-assets\drive-download-20260612T183740Z-3-001\allofme.JPG" class="allofme"
+                alt="Photo of Sylas posing awesomely for picture." />
+            <img src="test-assets\drive-download-20260612T183740Z-3-001\bc2mFun.JPG" class="bc2m"
+                alt="Photo of Sylas and his friends at bring change to mind event having fun" />
+            <img src="test-assets\drive-download-20260612T183740Z-3-001\cookieandme.JPG" class="cookieandme"
+                alt="Photo of Sylas eating his favorite food: a cookie" />
+            <img src="test-assets\drive-download-20260612T183740Z-3-001\me-at-scifair.JPEG" class="me-at-scifair"
+                alt="Photo of Sylas standing proudly by his own research poster" />
+            <img src="test-assets\drive-download-20260612T183740Z-3-001\me-ella-cora.JPG" class="me-ella-cora"
+                alt="Photo of a group of friends with Sylas having a blast at a birthday party" />
+            <img src="test-assets\drive-download-20260612T183740Z-3-001\oboeday.JPEG" class="oboeday"
+                alt="Photo of Sylas performing an oboe solo with a professional player." />
+        </div>
+    </div>
+
+    <div class="section-container">
+        <h2 class="section-title">— Let's Connect.</h2>
+        <div class="two-col">
+            <img src="test-assets/Subject2.png" class="side-img" alt="Picture of Sylas" />
+            <div class="connect-content">
+                <p class="connect-heading">Want to reach out?</p>
+                <p class="connect-text">Whether it's a project, a question, or just a conversation: </p>
+                <a href="#" class="connect-btn">Say Hello</a>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact" class="site-footer">
+        <p class="footer-name">Sylas White</p>
+        <div class="footer-links">
+            <a href="mailto:sylastw@att.net" class="footer-link">Email</a>
+            <span class="footer-sep">·</span>
+            <a href="#" class="footer-link">GitHub</a>
+            <span class="footer-sep">·</span>
+            <a href="#" class="footer-link">LinkedIn</a>
+        </div>
+        <p class="footer-small">© 2026 Sylas White</p>
     </footer>
+
 </body>
 
 </html>
