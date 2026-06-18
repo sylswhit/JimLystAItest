@@ -306,7 +306,7 @@ h2 {
 }
 
 
-/* small label above the title: e.g. "Science · 2024" */
+/* small label */
 .project-tag {
     color: rgba(255, 255, 255, 0.35);
     font-family: 'Space Grotesk', Arial, sans-serif;
