@@ -1,4 +1,4 @@
-/* FONTS USED
+/* Fonts used
    Courier New        — hero line 1 ("Making") — monospace, italic
    Playfair Display   — hero line 2, section titles — elegant serif
    Bebas Neue         — hero line 3, skill names — bold condensed display
@@ -71,6 +71,10 @@ h2 {
     font-size: 16px;
 }
 
+.nav-home:hover {
+    text-decoration: underline;
+}
+
 .nav-sep {
     color: rgba(255, 255, 255, 0.5);
     font-size: 16px;
@@ -90,19 +94,13 @@ h2 {
     font-size: 15px;
     padding: 8px 14px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
     transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .nav-link:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border-color: rgba(255, 255, 255, 0.4);
-}
-
-.nav-link:focus {
-    outline: 1px solid rgba(255, 255, 255, 0.5);
-    outline-offset: 2px;
 }
 
 /* #endregion */
@@ -115,7 +113,6 @@ h2 {
     max-width: 1200px;
 }
 
-/* line 1: "Making" — Courier New italic, slides left on scroll */
 .one {
     font-family: 'Courier New', monospace;
     font-style: italic;
@@ -129,7 +126,6 @@ h2 {
     animation-range: entry 0% exit 100%;
 }
 
-/* line 2: "myself" — Playfair Display, slides right on scroll */
 .two {
     font-family: 'Playfair Display', Garamond, serif;
     font-weight: bold;
@@ -141,7 +137,6 @@ h2 {
     animation-range: entry 0% exit 100%;
 }
 
-/* line 3: "even better" — Bebas Neue condensed display, slides left on scroll */
 .three {
     font-family: 'Bebas Neue', Arial, sans-serif;
     font-weight: 400;
@@ -286,6 +281,11 @@ h2 {
     transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
+.story-card:hover {
+    border: 1px solid white;
+    transform: translate(0, 4px);
+}
+
 /* #endregion */
 
 
@@ -305,10 +305,14 @@ h2 {
     transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
+.project-card:hover {
+    border-color: white;
+    transform: translate(0, 4px);
+}
 
 /* small label */
 .project-tag {
-    color: rgba(255, 255, 255, 0.35);
+    color: white;
     font-family: 'Space Grotesk', Arial, sans-serif;
     font-size: 11px;
     letter-spacing: 2px;
@@ -335,7 +339,7 @@ h2 {
     flex-grow: 1;
 }
 
-/* sits at the bottom of the card, brightens on hover */
+/* link brightens on hover */
 .project-link {
     color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
@@ -353,12 +357,17 @@ h2 {
 
 
 /* #region skills rows (section 2) */
+.section-container-skill {
+    z-index: 1;
+}
+
 .skill-row {
     display: flex;
     align-items: baseline;
     gap: 24px;
     padding: 18px 0;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+    z-index: 1;
     transition: padding-left 0.3s ease;
 }
 
@@ -366,70 +375,28 @@ h2 {
     float: right;
     display: flex;
     justify-content: space-around;
-}
-
-
-.allofme {
-    width: 100px;
     filter: grayscale(100%);
     transition: filter 0.4s ease;
-    position: relative;
-    transform: translate(80px, -50px);
+    perspective: 1000px;
 }
 
-.allofme:hover {
-    filter: grayscale(0%);
-    scale: 1.1;
+.frontside {
+    width: 250px;
+    height: auto;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    border-radius: 10%;
+    bottom: 30px;
 }
 
-.bc2m {
-    width: 100px;
-    filter: grayscale(100%);
-    transition: filter 0.4s ease;
-    position: relative;
-    transform: translate(-20px, -350px);
+.flipped {
+    transform: rotateY(180deg);
 }
 
-.bc2m:hover {
-    filter: grayscale(0%);
-    scale: 1.1;
-}
-
-.cookieandme {
-    width: 100px;
-    filter: grayscale(100%);
-    transition: filter 0.4s ease;
-    position: relative;
-    transform: translate(0px, -300px);
-}
-
-.cookieandme:hover {
-    filter: grayscale(0%);
-    scale: 1.1;
-}
-
-.me-at-scifair {
-    width: 100px;
-    filter: grayscale(100%);
-    transition: filter 0.4s ease;
-    position: relative;
-    transform: translate(0px, -250px);
-}
-
-.me-at-scifair:hover {
-    filter: grayscale(0%);
-    scale: 1.1;
-}
-
-.oboeday {
-    width: 100px;
-    filter: grayscale(100%);
-    transition: filter 0.4s ease;
-    position: relative;
-    transform: translate(-300px, -75px);
-}
-
-.oboeday:hover {
+.pic-container:hover {
     filter: grayscale(0%);
     scale: 1.1;
 }
