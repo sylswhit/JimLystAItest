@@ -18,6 +18,7 @@ body {
     padding: 0;
     margin: 0;
     line-height: 1.6;
+
 }
 
 p {
@@ -102,13 +103,59 @@ h2 {
 }
 
 .nav-link:hover {
-    background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background: white;
+    color: black;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-theme {
+    color: lightgray;
+    background: black;
+    text-decoration: none;
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: 15px;
+    padding: 8px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-theme:hover {
+    background: white;
+    color: black;
     border-color: rgba(255, 255, 255, 0.4);
 }
 
 /* #endregion */
 
+/* #region scroll nudge arrow */
+.scroll-nudge {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.scroll-nudge:hover {
+    background: white;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    scale: 1.1;
+}
+
+/* #endregion */
 
 /* #region hero text animations */
 .text-container {
@@ -224,6 +271,7 @@ h2 {
     max-width: 100%;
     filter: grayscale(100%);
     transition: filter 0.4s ease, transform 0.4s ease;
+    filter: invert(0);
 }
 
 .me:hover {
@@ -394,6 +442,7 @@ h2 {
     position: absolute;
     border-radius: 10%;
     bottom: 30px;
+    right: 30px;
 }
 
 .flipped {
