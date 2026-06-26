@@ -8,6 +8,10 @@
 
 
 /* #region base styles */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: black;
     overflow-x: hidden;
