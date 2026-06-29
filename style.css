@@ -460,14 +460,13 @@ h2 {
     display: flex;
     justify-content: center;
     filter: grayscale(100%);
-    transition: filter 0.4s ease;
+    transition: filter 0.4s ease, transform 0.4s ease, scale 0.4s ease;
     perspective: 1000px;
 }
 
 .frontside {
     width: 250px;
     height: auto;
-    transition: transform 0.6s ease;
     transform-style: preserve-3d;
     cursor: pointer;
     z-index: 2;
@@ -475,6 +474,7 @@ h2 {
     border-radius: 10%;
     top: 0;
     right: 0;
+    transition: transform 0.6s ease, filter 0.4s ease;
 }
 
 .flipped {
@@ -491,9 +491,9 @@ h2 {
     height: auto;
     aspect-ratio: 1;
     filter: grayscale(100%);
-    transition: filter 0.4s ease;
     position: relative;
     transform: translate(-150px, -175px);
+    transition: filter 0.4s ease, transform 0.4s ease;
 }
 
 .side-img:hover {
@@ -532,10 +532,10 @@ h2 {
     max-height: 420px;
     object-fit: cover;
     filter: grayscale(100%);
-    transition: filter 0.4s ease;
     border-radius: 10%;
     position: relative;
     transform: translate(0, 10px);
+    transition: filter 0.4s ease, transform 0.4s ease, scale 0.4s ease;
 }
 
 .me-in-car:hover {
