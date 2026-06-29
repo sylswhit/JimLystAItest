@@ -1,35 +1,41 @@
 let btn = document.querySelector(".pic-container");
 let theme = document.querySelector(".nav-theme");
-let body = document.querySelector("body");
+let body = document.documentElement;
 let img = document.querySelector("img");
 let car = document.querySelector(".me-in-car");
+let nudge = document.querySelector(".scroll-nudge");
 
-let front = new Image();
-front.src = "test-assets\Sylas_White_1.jpg";
-let back = new Image();
-back.src = "test-assets\collage-of-me.jpg";
-back.className = "frontside";
-back.style.display = "none";
+
 
 // flipping idea shared by peers
 // recieved help through online sources in works cited
-let showingFirst = true;
 let invert = false;
-btn.appendChild(front);
-btn.appendChild(back);
 
+if (btn) {
+    let front = new Image();
+    front.src = "test-assets/Sylas_White_1.jpg";
+    front.className = "frontside";
+    let back = new Image();
+    back.src = "test-assets/collage-of-me.jpg";
+    back.className = "frontside";
+    back.style.display = "none";
 
-btn.addEventListener("dblclick", function () {
-    btn.classList.toggle("flipped");
-    if (showingFirst) {
-        front.style.display = "none";
-        back.style.display = "block";
-    } else {
-        front.style.display = "block";
-        back.style.display = "none";
-    }
-    showingFirst = !showingFirst;
-});
+    let showingFirst = true;
+    btn.appendChild(front);
+    btn.appendChild(back);
+
+    btn.addEventListener("dblclick", function () {
+        btn.classList.toggle("flipped");
+        if (showingFirst) {
+            front.style.display = "none";
+            back.style.display = "block";
+        } else {
+            front.style.display = "block";
+            back.style.display = "none";
+        }
+        showingFirst = !showingFirst;
+    });
+}
 
 // invert theme!
 theme.addEventListener("click", function () {
@@ -38,17 +44,19 @@ theme.addEventListener("click", function () {
         body.style.background = "rgba(255, 255, 255, 0.8)";
         // make pictures normal
         document.querySelectorAll("img").forEach(el => {
-            el.style.filter = "invert(1)";
+            el.style.filter = "invert(1) grayscale(100%)";
         });
         invert = true;
+        nudge.style.position = "fixed";
     } else {
         body.style.filter = "invert(0)";
         body.style.background = "black";
-        // make picuteres normal again
+        // hopefully make picuteres normal again
         document.querySelectorAll("img").forEach(el => {
-            el.style.filter = "invert(0)";
+            el.style.filter = "invert(0) grayscale(100%)";
         });
         invert = false;
+        nudge.style.position = "fixed";
     }
 });
 

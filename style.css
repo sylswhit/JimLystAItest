@@ -111,7 +111,7 @@ h2 {
 .nav-theme {
     color: lightgray;
     background: black;
-    text-decoration: none;
+    position: sticky;
     font-family: 'Space Grotesk', Arial, sans-serif;
     font-size: 15px;
     padding: 8px 14px;
@@ -136,7 +136,7 @@ h2 {
     height: 48px;
     background: transparent;
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     font-size: 20px;
     cursor: pointer;
@@ -245,7 +245,7 @@ h2 {
 }
 
 .aboutme-title {
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.8);
     font-family: 'Playfair Display', Garamond, serif;
     font-size: 1.2rem;
     letter-spacing: 2px;
@@ -269,13 +269,12 @@ h2 {
 .me {
     width: 500px;
     max-width: 100%;
-    filter: grayscale(100%);
+    filter: invert(0) grayscale(100%);
     transition: filter 0.4s ease, transform 0.4s ease;
-    filter: invert(0);
 }
 
 .me:hover {
-    filter: grayscale(0%);
+    filter: invert(0) grayscale(0%);
     transform: scale(1.03);
 }
 
@@ -289,13 +288,14 @@ h2 {
     padding: 40px 40px 0;
     max-width: 1200px;
     border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+    z-index: 1;
     animation: fadeInUp 0.8s ease both;
     animation-timeline: view();
     animation-range: entry 0% entry 35%;
 }
 
 .section-title {
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.8);
     font-family: 'Playfair Display', Garamond, serif;
     font-size: 1.2rem;
     letter-spacing: 2px;
@@ -410,7 +410,19 @@ h2 {
 
 /* #region skills rows (section 2) */
 .section-container-skill {
+    padding: 0 40px;
     z-index: 1;
+}
+
+.skills-layout {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.skill-rows {
+    flex: 1;
+    min-width: 0;
 }
 
 .skill-row {
@@ -421,12 +433,32 @@ h2 {
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
     z-index: 1;
     transition: padding-left 0.3s ease;
+    color: white;
+}
+
+.skill-name {
+    font-family: 'Playfair Display', Garamond, serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: white;
+    flex-shrink: 0;
+    min-width: 220px;
+}
+
+.skill-desc {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
 }
 
 .pic-container {
-    float: right;
+    position: relative;
+    flex-shrink: 0;
+    width: 250px;
+    height: 320px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     filter: grayscale(100%);
     transition: filter 0.4s ease;
     perspective: 1000px;
@@ -441,8 +473,8 @@ h2 {
     z-index: 2;
     position: absolute;
     border-radius: 10%;
-    bottom: 30px;
-    right: 30px;
+    top: 0;
+    right: 0;
 }
 
 .flipped {
@@ -494,7 +526,7 @@ h2 {
 
 /* #region connect section (section 3) */
 
-/* left-side image — grayscale, color on hover */
+/* limage grayscale, color on hover */
 .me-in-car {
     width: 90%;
     max-height: 420px;
