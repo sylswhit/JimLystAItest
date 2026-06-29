@@ -157,6 +157,49 @@ h2 {
 
 /* #endregion */
 
+/* #region contact form */
+.intro {
+    color: lightgray;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 200%;
+}
+
+.placeholders {
+    border-radius: 10%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.title,
+.artist,
+.image {
+    padding: 25px 25px;
+}
+
+.add-input {
+    color: lightgray;
+    background: black;
+    text-decoration: none;
+    font-family: 'Courier New', monospace;
+    font-style: italic, bold;
+    font-size: 20px;
+    padding: 8px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.add-input:hover {
+    background: white;
+    color: black;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* #endregion */
+
 /* #region hero text animations */
 .text-container {
     margin: 40px auto;
