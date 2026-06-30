@@ -29,12 +29,12 @@ p {
 
 h1 {
     color: white;
-    font-size: 700%;
+    font-size: 750%;
 }
 
 h2 {
     color: white;
-    font-size: 250%;
+    font-size: 750%;
     font-family: 'Playfair Display', Garamond, serif;
 }
 
@@ -73,7 +73,7 @@ h2 {
     text-decoration: none;
     font-family: 'Space Grotesk', Arial, sans-serif;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .nav-home:hover {
@@ -82,13 +82,13 @@ h2 {
 
 .nav-sep {
     color: rgba(255, 255, 255, 0.5);
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .nav-name {
     color: lightgray;
     font-family: 'Brush Script MT', cursive;
-    font-size: 20px;
+    font-size: 22px;
     font-style: italic;
 }
 
@@ -96,7 +96,7 @@ h2 {
     color: lightgray;
     text-decoration: none;
     font-family: 'Space Grotesk', Arial, sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     padding: 8px 14px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
@@ -113,7 +113,7 @@ h2 {
     background: black;
     position: sticky;
     font-family: 'Space Grotesk', Arial, sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     padding: 8px 14px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
@@ -161,7 +161,7 @@ h2 {
 .intro {
     color: lightgray;
     font-family: 'Brush Script MT', cursive;
-    font-size: 200%;
+    font-size: 300%;
 }
 
 .placeholders {
@@ -177,7 +177,8 @@ h2 {
 .title,
 .artist,
 .image {
-    padding: 25px 25px;
+    padding: 25px 35px;
+    font-size: 125%;
 }
 
 .add-input {
@@ -186,7 +187,7 @@ h2 {
     text-decoration: none;
     font-family: 'Courier New', monospace;
     font-style: italic, bold;
-    font-size: 20px;
+    font-size: 21px;
     padding: 8px 14px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
@@ -275,7 +276,7 @@ h2 {
 .name {
     color: lightgray;
     font-family: 'Brush Script MT', cursive;
-    font-size: 200%;
+    font-size: 210%;
 }
 
 /* #endregion */
@@ -290,7 +291,7 @@ h2 {
 .aboutme-title {
     color: rgba(255, 255, 255, 0.8);
     font-family: 'Playfair Display', Garamond, serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     letter-spacing: 2px;
     margin-bottom: 24px;
 }
@@ -305,12 +306,12 @@ h2 {
 .aboutme {
     text-align: right;
     font-family: Garamond, serif;
-    font-size: 1.1rem;
+    font-size: 1.21rem;
 }
 
 /* grayscale photo — color appears on hover */
 .me {
-    width: 500px;
+    width: 450px;
     max-width: 100%;
     filter: invert(0) grayscale(100%);
     transition: filter 0.4s ease, transform 0.4s ease;
@@ -340,7 +341,7 @@ h2 {
 .section-title {
     color: rgba(255, 255, 255, 0.8);
     font-family: 'Playfair Display', Garamond, serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     letter-spacing: 2px;
     margin-bottom: 24px;
     display: inline-block;
@@ -371,7 +372,7 @@ h2 {
     padding: 24px;
     color: rgba(255, 255, 255, 0.75);
     font-family: 'Space Grotesk', Arial, sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.8;
     transition: border-color 0.3s ease, transform 0.3s ease;
 }
@@ -409,7 +410,7 @@ h2 {
 .project-tag {
     color: white;
     font-family: 'Space Grotesk', Arial, sans-serif;
-    font-size: 11px;
+    font-size: 13px;
     letter-spacing: 2px;
     text-transform: uppercase;
     text-align: left;
@@ -419,7 +420,7 @@ h2 {
 .project-title {
     color: white;
     font-family: 'Playfair Display', Garamond, serif;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin: 0;
 }
@@ -427,7 +428,7 @@ h2 {
 .project-desc {
     color: rgba(255, 255, 255, 0.55);
     font-family: 'Space Grotesk', Arial, sans-serif;
-    font-size: 13px;
+    font-size: 17px;
     text-align: left;
     line-height: 1.75;
     margin: 0;
@@ -439,7 +440,7 @@ h2 {
     color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
     font-family: 'Space Grotesk', Arial, sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     transition: color 0.2s ease;
     margin-top: 8px;
 }
@@ -481,7 +482,7 @@ h2 {
 
 .skill-name {
     font-family: 'Playfair Display', Garamond, serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     letter-spacing: 1px;
     color: white;
     flex-shrink: 0;
@@ -490,8 +491,8 @@ h2 {
 
 .skill-desc {
     font-family: 'Space Grotesk', Arial, sans-serif;
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.5;
 }
 
@@ -596,7 +597,7 @@ h2 {
 
 .connect-heading {
     font-family: 'Playfair Display', Garamond, serif;
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: white;
     text-align: left;
     margin: 0;
@@ -605,7 +606,7 @@ h2 {
 .connect-text {
     color: rgba(255, 255, 255, 0.55);
     font-family: 'Space Grotesk', Arial, sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     text-align: left;
     margin: 0;
 }
@@ -617,7 +618,7 @@ h2 {
     color: white;
     text-decoration: none;
     font-family: 'Space Grotesk', Arial, sans-serif;
-    font-size: 14px;
+    font-size: 20px;
     letter-spacing: 1px;
     width: fit-content;
     transition: background 0.3s ease, color 0.3s ease;
@@ -659,7 +660,7 @@ h2 {
     color: rgba(255, 255, 255, 0.55);
     text-decoration: none;
     font-family: 'Space Grotesk', Arial, sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     transition: color 0.2s ease;
 }
 
@@ -675,7 +676,7 @@ h2 {
 .footer-small {
     color: rgba(255, 255, 255, 0.2);
     font-family: 'Space Grotesk', Arial, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 /* #endregion */
@@ -689,9 +690,9 @@ h2 {
 }
 
 .sources-title {
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.8);
     font-family: 'Playfair Display', Garamond, serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     letter-spacing: 2px;
     margin: 0 0 32px;
 }
@@ -699,7 +700,7 @@ h2 {
 .sources-text {
     color: rgba(255, 255, 255, 0.85);
     font-family: 'Times New Roman', Times, serif;
-    font-size: 15px;
+    font-size: 20px;
     max-width: 700px;
     width: 100%;
 }
@@ -717,7 +718,7 @@ h2 {
 .sources-text p {
     text-align: center;
     color: rgba(255, 255, 255, 0.4);
-    font-size: 13px;
+    font-size: 20px;
     margin: 0;
 }
 

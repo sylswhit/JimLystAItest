@@ -4,6 +4,7 @@ let body = document.documentElement;
 let img = document.querySelector("img");
 let car = document.querySelector(".me-in-car");
 let nudge = document.querySelector(".scroll-nudge");
+let send = document.querySelector(".add-input");
 
 
 
@@ -38,32 +39,47 @@ if (btn) {
 }
 
 // invert theme!
-theme.addEventListener("click", function () {
-    if (invert === false) {
-        body.style.filter = "invert(1)";
-        body.style.background = "rgba(255, 255, 255, 0.8)";
-        // make pictures normal
-        document.querySelectorAll("img").forEach(el => {
-            el.style.filter = "invert(1) grayscale(100%)";
-        });
-        invert = true;
-        nudge.style.position = "fixed";
-    } else {
-        body.style.filter = "invert(0)";
-        body.style.background = "black";
-        // hopefully make picuteres normal again
-        document.querySelectorAll("img").forEach(el => {
-            el.style.filter = "invert(0) grayscale(100%)";
-        });
-        invert = false;
-        nudge.style.position = "fixed";
-    }
-});
+if (theme) {
+    theme.addEventListener("click", function () {
+        if (invert === false) {
+            body.style.filter = "invert(1)";
+            body.style.background = "rgba(255, 255, 255, 0.8)";
+            // make pictures normal
+            document.querySelectorAll("img").forEach(el => {
+                el.style.filter = "invert(1) grayscale(100%)";
+            });
+            invert = true;
+            nudge.style.position = "fixed";
+        } else {
+            body.style.filter = "invert(0)";
+            body.style.background = "black";
+            // hopefully make picuteres normal again
+            document.querySelectorAll("img").forEach(el => {
+                el.style.filter = "invert(0) grayscale(100%)";
+            });
+            invert = false;
+            nudge.style.position = "fixed";
+        }
+    });
+}
 
-
+// clear the inputs after adding
+function addSongInfo() {
+    document.querySelector(".title").value = "";
+    document.querySelector(".image").value = "";
+    document.querySelector(".artist").value = "";
+}
 
 // Scroll-nudge arrow (accessibility)
 const scrollNudge = document.getElementById('scroll-nudge');
-scrollNudge.addEventListener('click', () => {
-    window.scrollBy({ top: 300, behavior: 'smooth' });
-});
+if (scrollNudge) {
+    scrollNudge.addEventListener('click', () => {
+        window.scrollBy({ top: 300, behavior: 'smooth' });
+    });
+}
+
+if (send) {
+    send.addEventListener("click", function () {
+        addSongInfo();
+    });
+}
