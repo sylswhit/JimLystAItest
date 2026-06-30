@@ -301,17 +301,19 @@ h2 {
     align-items: center;
     padding: 20px;
     margin: 20px;
+    margin-top: -50px;
 }
 
 .aboutme {
     text-align: right;
     font-family: Garamond, serif;
-    font-size: 1.21rem;
+    line-height: 2;
+    letter-spacing: 0.08cap;
+    font-size: 1.20rem;
 }
 
-/* grayscale photo — color appears on hover */
 .me {
-    width: 450px;
+    width: 412px;
     max-width: 100%;
     filter: invert(0) grayscale(100%);
     transition: filter 0.4s ease, transform 0.4s ease;
