@@ -284,7 +284,7 @@ h2 {
 /* #region about me section */
 .aboutme-container {
     margin: 60px auto;
-    padding: 40px 60px 0;
+    padding: 40px 45px 0;
     border-top: 0.5px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -306,11 +306,20 @@ h2 {
 
 .aboutme {
     text-align: right;
-    font-family: Garamond, serif;
+    font-family: 'Space Grotesk', Arial, sans-serif;
     line-height: 2;
     letter-spacing: 0.08cap;
-    font-size: 1.20rem;
+    font-size: 1.13rem;
+
 }
+
+.aboutme-q {
+    text-align: center;
+    font-family: Garamond, serif;
+    font-size: 140%;
+    padding-top: 25px;
+}
+
 
 .me {
     width: 412px;
@@ -374,7 +383,7 @@ h2 {
     padding: 24px;
     color: rgba(255, 255, 255, 0.75);
     font-family: 'Space Grotesk', Arial, sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.8;
     transition: border-color 0.3s ease, transform 0.3s ease;
 }
@@ -422,7 +431,7 @@ h2 {
 .project-title {
     color: white;
     font-family: 'Playfair Display', Garamond, serif;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 700;
     margin: 0;
 }
@@ -430,7 +439,7 @@ h2 {
 .project-desc {
     color: rgba(255, 255, 255, 0.55);
     font-family: 'Space Grotesk', Arial, sans-serif;
-    font-size: 17px;
+    font-size: 17.5px;
     text-align: left;
     line-height: 1.75;
     margin: 0;
@@ -493,7 +502,7 @@ h2 {
 
 .skill-desc {
     font-family: 'Space Grotesk', Arial, sans-serif;
-    font-size: 1.15rem;
+    font-size: 1.16rem;
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.5;
 }
