@@ -71,10 +71,65 @@ function addSongInfo() {
 }
 
 // Scroll-nudge arrow (accessibility)
+//const scrollNudge = document.getElementById('scroll-nudge');
+//if (scrollNudge) {
+//  scrollNudge.addEventListener('click', () => {
+//      window.scrollBy({ top: 300, behavior: 'smooth' });
+//  });
+//}
+
+let current = 0;
+
 const scrollNudge = document.getElementById('scroll-nudge');
 if (scrollNudge) {
-    scrollNudge.addEventListener('click', () => {
-        window.scrollBy({ top: 300, behavior: 'smooth' });
+    scrollNudge.addEventListener("click", () => {
+        current++;
+
+        const aboutme = document.querySelector(".aboutme-container");
+        if (aboutme && current === 1) {
+            aboutme.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+            });
+        }
+
+        const path = document.querySelector(".story-card");
+        if (path && current === 2) {
+            path.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+            });
+        }
+
+        const project = document.querySelector(".project-grid");
+        if (project && current === 3) {
+            project.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+            });
+        }
+        const skills = document.querySelector(".section-container-skill");
+        if (skills && current === 4) {
+            skills.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+            });
+        }
+        const contact = document.querySelector(".two-col");
+        if (contact && current === 5) {
+            contact.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+            });
+
+        }
+        if (current === 6) {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            current = 0;
+        }
     });
 }
 
